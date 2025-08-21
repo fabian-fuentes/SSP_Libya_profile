@@ -1,9 +1,17 @@
-# SSP_Libya Profile
+# SSP_Libya
 
 This repository contains notebooks and supporting files used to run the
-**SISEPUEDE** model on Mongolia's mitigation scenarios. All modeling resources
+**SISEPUEDE** model on Libya's mitigation scenarios. All modeling resources
 reside in the `ssp_modeling` folder described below.
 
+---
+
+## Visualization
+
+Explore the public visualization of Libya's case study here:  
+[Libya Case Study – (Tableau)](https://public.tableau.com/app/profile/carlos.fabian.fuentes.rivas/viz/Libya_CaseStudy_v0/GHGsectorlayers)
+
+---
 
 ## Instructions: Setting Up the SISEPUEDE Environment
 
@@ -75,7 +83,6 @@ Your environment is now ready to use, with all dependencies (including those ins
   conda env list
   ```
 
-
 ## Project Structure
 
 The most relevant files are inside the `ssp_modeling` directory:
@@ -89,13 +96,3 @@ The most relevant files are inside the `ssp_modeling` directory:
 - `output_postprocessing/` – R scripts used to rescale model results and
     generate processed outputs.
 
-## Bulgaria Manager Workbooks
-
-We use notebooks to drive the modeling process:
-
-- **`bulgaria_manager_wb.ipynb`** – Runs the mapped scenarios using
-    `bulgaria_config.yaml`.
-
-Each notebook loads the appropriate configuration file, prepares the input data
-frame, applies the transformations listed in the corresponding workbook, and
-produces a CSV in `ssp_run/` with the results.
