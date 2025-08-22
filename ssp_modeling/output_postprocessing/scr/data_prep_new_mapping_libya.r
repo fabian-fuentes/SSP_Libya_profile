@@ -212,153 +212,13 @@ hp_filter_subsec <- function(data,
 }
 
 
-# AG - Crops
-
-res <- hp_filter_subsec(
-  data = data_new,
-  subsec_target = "AG - Crops",
-  gas_target = "N2O",
-  lambda_hp = 1600
-)
-
-# plot
-print(res$plot)
-
-
-
-# AG - Livestock
-
-res <- hp_filter_subsec(
-  data = res$data,
-  subsec_target = "AG - Livestock",
-  gas_target = "CH4",
-  lambda_hp = 1600
-)
-
-# plot
-print(res$plot)
-
-res <- hp_filter_subsec(
-  data = res$data,
-  subsec_target = "AG - Livestock",
-  gas_target = c('HFC','N2O','PFC','SF6'),
-  lambda_hp = 1600
-)
-
-
-# plot
-print(res$plot)
-
-
-#  EN - Building 
-
-res <- hp_filter_subsec(
-  data = res$data,
-  subsec_target = "EN - Building",
-  gas_target = "CH4",
-  lambda_hp = 1600
-)
-
-# plot
-print(res$plot)
-
-
-#  EN - Electricity/Heat
-
-res <- hp_filter_subsec(
-  data = res$data,
-  subsec_target = "EN - Electricity/Heat",
-  gas_target = "CH4",
-  lambda_hp = 1600
-)
-
-# plot
-print(res$plot)
-
-
-res <- hp_filter_subsec(
-  data = res$data,
-  subsec_target = "EN - Electricity/Heat",
-  gas_target = "CO2",
-  lambda_hp = 1600
-)
-
-# plot
-print(res$plot)
-
-
-res <- hp_filter_subsec(
-  data = res$data,
-  subsec_target = "EN - Electricity/Heat",
-  gas_target = c('HFC','N2O','PFC','SF6'),
-  lambda_hp = 1600
-)
-
-# plot
-print(res$plot)
-
-
-
-#   EN - Manufacturing/Construction
-
-
-res <- hp_filter_subsec(
-  data = res$data,
-  subsec_target = "EN - Manufacturing/Construction",
-  gas_target = "CH4",
-  lambda_hp = 1600
-)
-
-# plot
-print(res$plot)
-
-res <- hp_filter_subsec(
-  data = res$data,
-  subsec_target = "EN - Manufacturing/Construction",
-  gas_target = "CO2",
-  lambda_hp = 1600
-)
-
-# plot
-print(res$plot)
-
-
-#   LULUCF - Deforestation
-
-
-res <- hp_filter_subsec(
-  data = res$data,
-  subsec_target = "LULUCF - Deforestation",
-  gas_target = "CO2",
-  lambda_hp = 1600
-)
-
-# plot
-print(res$plot)
-
-# Waste - Solid Waste 
-
-res <- hp_filter_subsec(
-  data = res$data,
-  subsec_target = "Waste - Solid Waste",
-  gas_target = c('HFC','N2O','PFC','SF6'),
-  lambda_hp = 1600
-)
-
-# plot
-print(res$plot)
-
-table(data_new$CSC.Subsector)
-table(data_new$Gas)
-
-
 # EN - Fugitive Emissions
 
 res <- hp_filter_subsec(
-  data = res$data,
+  data = data_new,
   subsec_target = "EN - Fugitive Emissions",
   gas_target = c('HFC','N2O','PFC','SF6'),
-  lambda_hp = 1600
+  lambda_hp = 400
 )
 
 # plot
@@ -368,7 +228,7 @@ res <- hp_filter_subsec(
   data = res$data,
   subsec_target = "EN - Fugitive Emissions",
   gas_target = "CO2",
-  lambda_hp = 1600
+  lambda_hp = 400
 )
 
 # plot
@@ -378,7 +238,61 @@ res <- hp_filter_subsec(
   data = res$data,
   subsec_target = "EN - Fugitive Emissions",
   gas_target = "CH4",
-  lambda_hp = 1600
+  lambda_hp = 100
+)
+
+# plot
+print(res$plot)
+
+
+# EN - Transportation
+
+res <- hp_filter_subsec(
+  data = res$data,
+  subsec_target = "EN - Transportation",
+  gas_target = 'CO2',
+  lambda_hp = 800
+)
+
+res <- hp_filter_subsec(
+  data = res$data,
+  subsec_target = "EN - Transportation",
+  gas_target = 'CH4',
+  lambda_hp = 800
+)
+
+res <- hp_filter_subsec(
+  data = res$data,
+  subsec_target = "EN - Transportation",
+  gas_target = c('HFC','N2O','PFC','SF6'),
+  lambda_hp = 800
+)
+
+# plot
+print(res$plot)
+
+
+# EN - Electricity/Heat 
+
+res <- hp_filter_subsec(
+  data = res$data,
+  subsec_target = "EN - Electricity/Heat",
+  gas_target = 'CO2',
+  lambda_hp = 100
+)
+
+res <- hp_filter_subsec(
+  data = res$data,
+  subsec_target = "EN - Electricity/Heat",
+  gas_target = 'CH4',
+  lambda_hp = 100
+)
+
+res <- hp_filter_subsec(
+  data = res$data,
+  subsec_target = "EN - Electricity/Heat",
+  gas_target = c('HFC','N2O','PFC','SF6'),
+  lambda_hp = 100
 )
 
 # plot
