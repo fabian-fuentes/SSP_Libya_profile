@@ -12,7 +12,7 @@ rm(list=ls())
 
 
 #ouputfile
-dir.output  <- "ssp_modeling/ssp_run_output/sisepuede_run_2025-08-19T22;16;18.205749/"
+dir.output  <- "ssp_modeling/ssp_run_output/sisepuede_run_2025-08-21T18;46;49.258574/"
 output.file <- paste0(basename(sub("/$", "", dir.output)), ".csv")
 
 region <- "libya" 

@@ -1,7 +1,7 @@
 #lets just bring in the 
 #read all folders 
  dir.data <- "ssp_modeling/cb/cb_results/"
- target_cb_file <- "cost_benefit_results_tornado.csv"
+ target_cb_file <- "cba_resultados.csv"
  cb_data <-read.csv(paste0(dir.data,target_cb_file))
 
  cb_chars <- data.frame(do.call(rbind, strsplit(as.character(cb_data$variable), ":")))
@@ -25,12 +25,16 @@ cb_data$Year <- cb_data$time_period+2015
 head(cb_data)
 
 #change strategy names 
-cb_data$strategy <- gsub("PFLO:LEP", "Lower Emissions Pathway", cb_data$strategy )
+cb_data$strategy <- gsub("PFLO:NDC", "NDC", cb_data$strategy )
+cb_data$strategy <- gsub("PFLO:NZ", "Low Emissions Pathway", cb_data$strategy )
 
+table(cb_data$strategy)
+table(cb_data$strategy_code)
 
-#create strategy id 
-cb_data$strategy <- cb_data$strategy_code
-cb_data$strategy_id <- ifelse(cb_data$strategy=="PFLO:LEP",600)
+# #create strategy id 
+#cb_data$strategy <- cb_data$strategy_code
+#cb_data$strategy_id <- ifelse(cb_data$strategy=="PFLO:NDC",6003)
+#cb_data$strategy_id <- ifelse(cb_data$strategy=="PFLO:NZ",6004)
 cb_data$ids <- paste(cb_data$variable,cb_data$strategy_id,sep=":")
 
 dir.out <- "ssp_modeling/Tableau/data/"
