@@ -9,7 +9,7 @@ reside in the `ssp_modeling` folder described below.
 ## Visualization
 
 Explore the public visualization of Libya's case study here:  
-[Libya Case Study – (Tableau)](https://public.tableau.com/app/profile/carlos.fabian.fuentes.rivas/viz/Libya_CaseStudy_v0/GHGsectorlayers)
+[Libya Case Study – (Tableau)](https://public.tableau.com/app/profile/carlos.fabian.fuentes.rivas/viz/Libya_CaseStudy/GHGsectorlayers)
 
 ---
 
